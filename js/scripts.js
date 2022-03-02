@@ -16,3 +16,8 @@ let month= d.getMonth();
 let year = d.getFullYear();
 let dayOfWeekNumber= d.getDay();
 let century= year/100;
+if (dayOfWeekNumber===0 && gender==="F")
+{
+    console.log( nameOfDay = "DAY OF WEEK:",'Sunday');
+  console.log("Your akan name is:",akanNameFemale="Akosua");
+}
