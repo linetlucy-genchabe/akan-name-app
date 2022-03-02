@@ -76,3 +76,8 @@ else if(dayOfWeekNumber===5 && gender==="M")
   console.log( nameOfDay = "DAY OF WEEK:",'Friday');
   console.log("Your akan name is:",akanNameMale="kofi");
 }
+else if(dayOfWeekNumber===6 && gender==="F")
+{
+   console.log(nameOfDay = "DAY OF WEEK:",'Saturday');
+  console.log("Your akan name is:",akanNameFemale="ama");
+}
