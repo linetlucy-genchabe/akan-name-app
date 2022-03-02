@@ -2,8 +2,11 @@ var nameOfDay;
 var gender;
 var akanNameMale;
 var akanNameFemale;
-
-var gender= prompt("gender: F/M");
+function myFunction()
+{
+var gender= document.getElementById("myRadio").value;
+document.getElementById("demo").innerHTML=gender;
+}
 var dayOfWeekNumbers = (day+(2.6*month-0.2)-2*century+year+(year/4)+(century/4)) % 7;
 
 console.log("day of week number:",dayOfWeekNumber);
