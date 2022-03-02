@@ -5,11 +5,11 @@ var akanNameFemale;
 function myFunction()
 {
 var gender= document.getElementById("myRadio").value;
-document.getElementById("demo").innerHTML=gender;
+document.getElementById("gender").innerHTML=gender;
 }
-var dayOfWeekNumbers = (day+(2.6*month-0.2)-2*century+year+(year/4)+(century/4)) % 7;
+//var dayOfWeekNumbers = (day+(2.6*month-0.2)-2*century+year+(year/4)+(century/4)) % 7;
 
-console.log("day of week number:",dayOfWeekNumber);
+//console.log("day of week number:",dayOfWeekNumber);
 
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const months= ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -19,6 +19,11 @@ let month= d.getMonth();
 let year = d.getFullYear();
 let dayOfWeekNumber= d.getDay();
 let century= year/100;
+
+var dayOfWeekNumbers = (day+(2.6*month-0.2)-2*century+year+(year/4)+(century/4)) % 7;
+
+console.log("day of week number:",dayOfWeekNumber);
+
 if (dayOfWeekNumber===0 && gender==="F")
 {
     console.log( nameOfDay = "DAY OF WEEK:",'Sunday');
