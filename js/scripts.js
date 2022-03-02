@@ -10,3 +10,9 @@ console.log("day of week number:",dayOfWeekNumber);
 
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const months= ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const d = new Date("June 15, 2001");
+let day = d.getDate();
+let month= d.getMonth();
+let year = d.getFullYear();
+let dayOfWeekNumber= d.getDay();
+let century= year/100;
