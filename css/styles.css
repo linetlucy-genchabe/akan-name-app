@@ -1,11 +1,19 @@
 .choose {
     height: 200px;
     width: 300px;
-    border: 2px solid brown;
+    border: 2px solid palevioletred;
     border-radius: 20px;
-    margin-left: 15px;
+    background-color: palevioletred;
+    float: left;
+    margin-left: 100px;
+    
 }
-.body {
-    background-color: lightgrey;
-    font-family: Arial, Helvetica, sans-serif;
+.birthday {
+    height: 200px;
+    width: 300px;
+    border: 2px solid palevioletred;
+    border-radius: 20px;
+    background-color: palevioletred;
+    float: left;
+    margin-left: 100px;
 }
