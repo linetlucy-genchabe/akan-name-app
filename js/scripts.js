@@ -41,3 +41,8 @@ else if(dayOfWeekNumber===2 && gender==="F")
   console.log(nameOfDay = "DAY OF WEEK:",'Tuesday');
   console.log("Your akan name is:",akanNameFemale="abenaa");
 }
+else if(dayOfWeekNumber===2 && gender==="M")
+{
+  console.log(nameOfDay = "DAY OF WEEK:",'Tuesday');
+  console.log("Your akan name is:",akanNameMale="kwabena");
+}
