@@ -3,7 +3,7 @@
     <head>
         <title>Akan Name</title>
         <meta charset="utf-8">
-    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/styles.css" rel="stylesheet" type="text/css" >
         <link href="bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
     </head>
@@ -20,22 +20,24 @@
             </div>
         
             <div class="birthday">
-                <p>Enter your birthday</p>
+                <p><b>Pick Birthday</b></p>
                 <!-- <label for="birthday">Birthday:</label> -->
                 <input type="date" id="birthday" name="birthday">
                 <input type="submit" name="Submit here" height="50px" width="200px">
 
             </div>
             <div class="choose">
-               <p><b>Enter your gender:</b></p>
-               <input type="radio" name="gender" value="F" id="myRadio">FEMALE<br>
-                <input type="radio" name="gender" value="M" id="myRadio">MALE<br>
-                <p id="gender"></p>
+               <p><b>Pick gender:</b></p>
+               <input type="radio" name="gender" value="Female" id="gender">FEMALE<br>
+                <input type="radio" name="gender" value="Male" id="gender">MALE<br>
+                <p id="myGender"></p>
 
                 <button onclick="myFunction()">Submit</button>
             </div>
             <div class="yourname">
-                <p>Your akan name is:</p>
+                <p><b>Your akan name is:</b></p>
+                <!-- <input type="button" name="button" value="clickme!"> -->
+                 <button onclick="newFunction()">Clickme!</button>
             </div>
             <div class="card-footer">
                 <p><b>I'm glad you tried it! I hope you loved you akan name!</b></p>
