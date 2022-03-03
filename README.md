@@ -19,5 +19,5 @@ There are no known bugs as of now.
 Contact me via linetlucy21@gmail.com
 ### License
 * MIT license
-Copyright (c) {year} **{linetlucy's Akan name app}**
+Copyright (c) {2022} **{linetlucy's Akan name app}**
   
