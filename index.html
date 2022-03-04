@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Akan Name</title>
@@ -20,53 +20,49 @@
             <p>This app simplifies the process for you by deriving your akan name.</p>
 
         </div>
+        <form name="myForm" class="form" onsubmit="validate();">
+            <div class="row">
+                <p style="margin-left:100px;"><b>Enter details:</b></p>
+                <div class="form-group">
 
-        <div class="birthday">
-            <p><b>Pick Birthday</b></p>
-            <!-- <label for="birthday">Birthday:</label> -->
-            <input type="date" id="birthday" name="birthday">
-            <p id="myBirthday"></p>
-            <button onclick="birthFunction()">Submit</button>
-            <script>
-                function birthFunction() {
-                    let birthday = document.getElementById("myBirthday").value;
-                    document.getElementById().innerHTML = birthday;
-                    const d = new Date("");
-                }
-            </script>
+                    <!-- <label for="birthday">Birthday:</label> -->
+                    <p style="margin-bottom: 6px; margin-top: 4px;"><b>Birthday:</b></p>
+                    <input type="number" class="form-control" name="year" id="year" placeholder="Year eg:1999" style="margin-top: 10px;">
+                    <input type="number" class="form-control" name="Month" id="month" placeholder="Month eg:09">
+                    <input type="number" class="form-control" name="day" id="date" placeholder=" Date eg:16" style="margin-bottom: 10px;">
 
-        </div>
-        <form action="index.html" method="post">
-            <div class="choose">
-                <p><b>Pick gender:</b></p>
-                <input type="radio" name="gender" value="Female" id="Female">FEMALE<br>
-                <input type="radio" name="gender" value="Male" id="Male">MALE<br>
-                <p id="myGender"></p>
 
-                <!-- <button onclick="myFunction()">Submit</button> -->
+                    <div class="form-check-inline" style="margin-top: 20px;">
+                        <label for="gender"><b>Gender</b></label><br>
+
+                        <input type="radio" class="form-check-input" name="gender" id="Male"> Male <br>
+
+                    </div>
+                    <div class="form-check-inline">
+
+                        <input type="radio" class="form-check-input" name="gender" id="Female"> Female
+
+                    </div>
+                </div>
             </div>
-            <script>
-                function myFunction() {
-                    let genderr = document.getElementById("myGender").value;
-                    document.getElementById().innerHTML = genderr;
-                }
-            </script>
+            <button type="submit" class="btn btn-primary" onclick="akan();" style="margin-left: 100px;height: 30px; width: 100px;background-color: plum;">Get Name</button>
         </form>
 
-        <div class="yourname">
-            <p><b>Your akan name is:</b></p>
-            <!-- <input type="button" name="button" value="clickme!"> -->
-            <button onclick="myFunction()">Clickme!</button>
-        </div>
-        <script>
-            function myFunction() {
-                let genderr = document.getElementById("myGender").value;
-                document.getElementById().innerHTML = genderr;
-            }
-        </script>
+
+
         <div class="card-footer">
             <p><b>I'm glad you tried it! I hope you loved you akan name!</b></p>
+            <p>
+                <a href="http://www.afropedea.org/akan-names" style="color: antiquewhite;"> <b>learn more about akan names!</b></a>
+            </p>
         </div>
+        </form>
+        <p id="results"></p>
+        <script>
+            function akan() {
+
+            }
+        </script>
     </div>
     <script src="js/scripts.js"></script>
 

@@ -1,34 +1,58 @@
-var gender = ("Female");
-
 var nameOfDay;
 var gender;
 var akanName;
 const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-const d = new Date("February 27, 2022");
-let day = d.getDate();
-let month = d.getMonth();
-let year = d.getFullYear();
-let dayOfWeekNumber = d.getDay();
-let century = year / 100;
-
-var dayOfWeekNumbers = (day + (2.6 * month - 0.2) - 2 * century + year + (year / 4) + (century / 4)) % 7;
-
-console.log("day of week number:", dayOfWeekNumber);
-console.log("Gender:", gender);
-
-function newFunction() {
-    if (document.getElementById("Female").checked == true) {
-        console.log("your gender is:", gender = "Female");
-    } else if (document.getElementById("Male").checked == true) {
-        console.log("your gender is:", gender = "Male");
+function validate() {
+    var gender = document.getElementsByName("gender");
+    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value > 2100 || document.myForm.year.value <= 1900) {
+        alert("Enter a valid year of birth");
+        document.myForm.year.focus();
+        return false;
+    } else if (document.myForm.month.value == "" || isNaN(document.myForm.month.value) ||
+        document.myForm.month.value.length != 2 || document.myForm.month.value > 12 || document.myForm.month.value <= 0) {
+        alert("Enter valid month of birth");
+        document.myForm.month.focus();
+        return false;
+    } else if (document.myForm.date.value == "" || isNaN(document.myForm.month.value) ||
+        document.myForm.month.value.length != 2 || document.myForm.date.value > 31 || document.myForm.date.value <= 0) {
+        alert("Enter a valid date");
+        document.myForm.day.focus();
+        return false;
+        // } else if (gender["Female"].checked == false && gender["Male"].checked == false) {
+        //     alert("Select male or female");
+        //     return false;
     } else {
-        console.log("invalid");
+        return true;
     }
+
 }
 
-function myFunction() {
+function dayOfWeek() {
+    year = document.getElementById("year").value;
+    CC = parseInt(year.substring(0, 2));
+    YY = parseInt(year.substring(2, 4));
+    MM = parseInt(document.getElementById("month").value);
+    DD = parseInt(document.getElementById("date").value);
+    dayOfWeekNumber = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
+    console.log(dayOfWeekNumber);
+    return (Math.floor(d));
+}
+
+
+// function getGender() {
+//     if (document.getElementById("Female").checked == true) {
+//         console.log("your gender is:", gender = "Female");
+//     } else if (document.getElementById("Male").checked == true) {
+//         console.log("your gender is:", gender = "Male");
+//     } else {
+//         console.log("invalid");
+//     }
+// }
+
+
+function getName() {
 
     if (dayOfWeekNumber === 0 && document.getElementById("Female").checked == true) {
         alert(nameOfDay = "DAY OF WEEK:Sunday");
@@ -37,42 +61,48 @@ function myFunction() {
         alert(nameOfDay = "DAY OF WEEK:Sunday");
         alert('Your akan name is: "kwasi"');
     } else if (dayOfWeekNumber === 1 && document.getElementById("Female").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Monday');
-        console.log("Your akan name is:", akanName = "adwoa");
+        alert(nameOfDay = "DAY OF WEEK:", 'Monday');
+        alert("Your akan name is:", akanName = "adwoa");
     } else if (dayOfWeekNumber === 1 && document.getElementById("Male").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Monday');
-        console.log("Your akan name is:", akanName = "kwadwo");
+        alert(nameOfDay = "DAY OF WEEK:", 'Monday');
+        alert("Your akan name is:", akanName = "kwadwo");
     } else if (dayOfWeekNumber === 2 && document.getElementById("Female").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Tuesday');
-        console.log("Your akan name is:", akanName = "abenaa");
-    } else if (dayOfWeekNumber === 2 && document.getElementById("Male").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Tuesday');
-        console.log("Your akan name is:", akanName = "kwabena");
+        alert(nameOfDay = "DAY OF WEEK:", 'Tuesday');
+        alert("Your akan name is:", akanName = "abenaa");
+    } else if (dayOfWeekNumber === 2 && gender(document.getElementById("Male").checked == true)) {
+        alert(nameOfDay = "DAY OF WEEK:", 'Tuesday');
+        alert("Your akan name is:", akanName = "kwabena");
     } else if (dayOfWeekNumber === 3 && document.getElementById("Female").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Wednesday');
-        console.log("Your akan name is:", akanName = "akua");
+        alert(nameOfDay = "DAY OF WEEK:", 'Wednesday');
+        alert("Your akan name is:", akanName = "akua");
     } else if (dayOfWeekNumber === 3 && document.getElementById("Male").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Wednesday');
-        console.log("Your akan name is:", akanName = "kwaku");
+        alert(nameOfDay = "DAY OF WEEK:", 'Wednesday');
+        alert("Your akan name is:", akanName = "kwaku");
     } else if (dayOfWeekNumber === 4 && document.getElementById("Female").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Thursday');
-        console.log("Your akan name is:", akanName = "yaa");
+        alert(nameOfDay = "DAY OF WEEK:", 'Thursday');
+        alert("Your akan name is:", akanName = "yaa");
     } else if (dayOfWeekNumber === 4 && document.getElementById("Male").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Thursday');
-        console.log("Your akan name is:", akanName = "yaw");
+        alert(nameOfDay = "DAY OF WEEK:", 'Thursday');
+        alert("Your akan name is:", akanName = "yaw");
     } else if (dayOfWeekNumber === 5 && document.getElementById("Female").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Friday');
-        console.log("Your akan name is:", akanName = "afua");
+        alert(nameOfDay = "DAY OF WEEK:", 'Friday');
+        alert("Your akan name is:", akanName = "afua");
     } else if (dayOfWeekNumber === 5 && document.getElementById("Male").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Friday');
-        console.log("Your akan name is:", akanName = "kofi");
+        alert(nameOfDay = "DAY OF WEEK:", 'Friday');
+        alert("Your akan name is:", akanName = "kofi");
     } else if (dayOfWeekNumber === 6 && document.getElementById("Female").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Saturday');
-        console.log("Your akan name is:", akanName = "ama");
+        alert(nameOfDay = "DAY OF WEEK:", 'Saturday');
+        alert("Your akan name is:", akanName = "ama");
     } else if (dayOfWeekNumber === 6 && document.getElementById("Male").checked == true) {
-        console.log(nameOfDay = "DAY OF WEEK:", 'Saturday');
-        console.log("Your akan name is:", akanName = "kwame");
+        alert(nameOfDay = "DAY OF WEEK:", 'Saturday');
+        alert("Your akan name is:", akanName = "kwame");
     } else {
-        console.log("invalid details!");
+        alert("invalid details!");
     }
+}
+
+function akan() {
+    alert(nameOfDay);
+    alert(dayOfWeekNumber);
+    alert(akanName);
 }

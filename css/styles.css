@@ -1,35 +1,18 @@
-.choose {
-    height: 100px;
-    width: 300px;
+.form-group {
+    height: 180px;
+    width: 520px;
     border: 2px;
     border-radius: 10px;
-    background-color: #ffc252;
+    background-color: rgb(221, 136, 178);
     text-align: center;
-    margin-left: 100px;
-    margin-top: 10px;
-}
-
-.birthday {
-    height: 110px;
-    width: 300px;
-    border: 2px;
-    border-radius: 10px;
-    background-color: #ffc252;
     text-align: center;
-    margin-left: 100px;
+    margin-bottom: 5px;
 }
 
 .details {
     margin-bottom: 10px;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px #ffc252;
+    box-shadow: 2px 2px 2px 2px rgb(221, 136, 178);
     height: 90px;
-}
-
-.yourname {
-    border-radius: 20px;
-    height: 70px;
-    box-shadow: 2px 2px 2px 2px #ffc252;
-    text-align: center;
 }
