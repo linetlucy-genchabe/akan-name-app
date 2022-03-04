@@ -101,7 +101,7 @@ function getName() {
     }
 }
 
-function akan() {
+function akanApp() {
     alert(nameOfDay);
     alert(dayOfWeekNumber);
     alert(akanName);
