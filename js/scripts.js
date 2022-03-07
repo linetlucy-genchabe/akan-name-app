@@ -15,7 +15,7 @@ function validate() {
     dayOfWeek();
     getGender();
     var gender = document.getElementsByName("gender");
-    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value > 2100 || document.myForm.year.value <= 1900) {
+    if (document.myForm.year.value == "" || document.myForm.year.value.length != 4 || document.myForm.year.value > 2022 || document.myForm.year.value <= 1900) {
         alert("Enter a valid year of birth");
         document.myForm.year.focus();
         return false;
